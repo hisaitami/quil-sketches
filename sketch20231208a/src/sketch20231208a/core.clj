@@ -19,7 +19,7 @@
   ;(q/background 22)
   (q/background 211 233 234)
   ;(q/no-stroke)
-  (doseq [[x y c] (for [x (range 0 (q/width) 5)
+  (doseq [[x y _] (for [x (range 0 (q/width) 5)
                         y (range 0 (q/height) 5)
                         :let [c (q/get-pixel @qrimg x y)]
                         :when (not= c -1)]
@@ -76,17 +76,17 @@
       (q/fill 0 (+ 100 (rand-int 80)) 130)
       (q/ellipse x y (rand-int 20) (rand-int 20)))
 
-      ; take 7
-      ; background 211 233 234
-      (q/stroke 0)
-      (q/fill (+ 100 (rand-int 80)) 0 0)
-      (q/ellipse x y 10 10)
-      (q/fill 0 (+ 100 (rand-int 80)) 130)
-      (q/ellipse x y (rand-int 20) (rand-int 20))
-      (q/no-stroke)
-      (let [r (mod x 4)]
-        (q/fill (+ 200 (rand-int 55)) 255 255)
-        (q/ellipse (+ (- x 60) (rand-int 120)) (+ (- y 60) (rand-int 120)) r r))
+    ; take 7
+    ; background 211 233 234
+    (q/stroke 0)
+    (q/fill (+ 100 (rand-int 80)) 0 0)
+    (q/ellipse x y 10 10)
+    (q/fill 0 (+ 100 (rand-int 80)) 130)
+    (q/ellipse x y (rand-int 20) (rand-int 20))
+    (q/no-stroke)
+    (let [r (mod x 4)]
+      (q/fill (+ 200 (rand-int 55)) 255 255)
+      (q/ellipse (+ (- x 60) (rand-int 120)) (+ (- y 60) (rand-int 120)) r r))
 
     ))
 
