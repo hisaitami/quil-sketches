@@ -7,6 +7,7 @@ pom.xml.asc
 *.class
 /.lein-*
 /.nrepl-port
+.clj-kondo/.cache
 ### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/macOS.gitignore
 
 # General
