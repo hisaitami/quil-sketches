@@ -13,12 +13,11 @@
   (q/background 0)
   (q/fill 0)
   (q/stroke 255)
-
-  (doseq [i (range (q/width) 0 -8)]
-    (let [p (/ (q/width) 2)
-          a (q/sin (- (:counter state) (/ i 48)))]
-      (q/arc p p i i 0 (* q/PI 2 a))
-      (q/arc p p i i a 0))))
+  (doseq [i (range (q/width) 0 -8)
+          :let [p (* 0.5 (q/width))
+                a (q/sin (- (:counter state) (/ i 48)))]]
+      (q/arc p p i i 0 (* q/TWO-PI a))
+      (q/arc p p i i a 0)))
 
 (q/defsketch sketch20200116a
   :title "sketch20200116a"
