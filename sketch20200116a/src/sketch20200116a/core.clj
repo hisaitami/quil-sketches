@@ -4,7 +4,7 @@
 
 (defn setup []
   (q/frame-rate 24)
-  {:counter 0})
+  {:counter 0.0})
 
 (defn update-state [state]
   {:counter (+ (:counter state) 0.1)})
