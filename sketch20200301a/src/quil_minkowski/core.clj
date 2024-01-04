@@ -1,28 +1,33 @@
 (ns quil-minkowski.core
   (:require [quil.core :as q]
-            [quil.middleware :as m]
             [tyrion.distance :as distance]))
 
-(defn setup []
-  (q/frame-rate 1))
+(def width 500)
 
-(defn draw-state [state]
-  ;(q/background 255)
-  (let [half-width 250
-        width (* half-width 2)
-        dist (fn [x y] (distance/minkowski [half-width half-width] [x y] 3))
-        gray (fn [dist] (int (* 255 (/ dist width))))
-        step (quot half-width 10)]
-    (dotimes [y width]
-      (dotimes [x width]
-        (q/stroke (* step (quot (gray (dist x y)) step)))
-        (q/stroke-weight 1)
-        (q/point x y)))))
+(def half-width (* 0.5 width))
+
+(def step (quot half-width 10))
+
+(defn dist [x y]
+  (distance/minkowski [half-width half-width] [x y] 3))
+
+(defn gray [dist]
+  (int (* 255 (/ dist width))))
+
+(defn setup []
+  (q/no-loop)
+  (q/redraw))
+
+(defn draw []
+  (doseq [y (range width)
+          x (range width)]
+    (q/stroke (* step (quot (gray (dist x y)) step)))
+    (q/stroke-weight 1)
+    (q/point x y)))
 
 (q/defsketch quil-minkowski
   :title "draw minkowski distance"
-  :size [500 500]
+  :size [width width]
   :setup setup
-  :draw draw-state
-  :features [:keep-on-top]
-  :middleware [m/fun-mode])
+  :draw draw
+  :features [:keep-on-top])
