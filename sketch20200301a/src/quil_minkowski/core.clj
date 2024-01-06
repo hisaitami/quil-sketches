@@ -15,8 +15,7 @@
   (int (* 255 (/ dist width))))
 
 (defn setup []
-  (q/no-loop)
-  (q/redraw))
+  (q/no-loop))
 
 (defn draw []
   (doseq [y (range width)
