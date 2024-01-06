@@ -1,0 +1,4 @@
+{:deps
+ {org.clojure/clojure {:mvn/version "1.11.1"}
+  quil/quil {:mvn/version "4.3.1323"}
+  tyrion/tyrion {:mvn/version "0.1.9"}}}

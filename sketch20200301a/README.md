@@ -14,6 +14,8 @@ Emacs - run cider, open `core.clj` and press `C-c C-k` to evaluate the file.
 
 REPL - run `(require 'quil-minkowski.core)`.
 
+CLI - run `clj -e "(require 'quil-minkowski.core)"`
+
 ## License
 
 Copyright (c) 2024 hisaitami
