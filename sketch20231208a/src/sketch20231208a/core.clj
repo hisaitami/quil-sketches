@@ -15,11 +15,10 @@
   ;(q/background 22)
   (q/background 211 233 234)
   ;(q/no-stroke)
-  (doseq [[x y _] (for [x (range 0 (q/width) 5)
-                        y (range 0 (q/height) 5)
-                        :let [c (q/get-pixel (:qrimg state) x y)]
-                        :when (not= c -1)]
-                    [x y c])]
+  (doseq [x (range 0 (q/width) 5)
+          y (range 0 (q/height) 5)
+          :let [c (q/get-pixel (:qrimg state) x y)]
+          :when (not= c -1)]
 
     (comment
       ;take 1
