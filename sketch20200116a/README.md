@@ -11,6 +11,8 @@ Emacs - run cider, open `core.clj` and press `C-c C-k` to evaluate the file.
 
 REPL - run `(require 'sketch20200116a.core)`.
 
+CLI - run `clj -e "(require 'sketch20200116a.core)"`
+
 ## License
 
 Copyright (c) 2024 hisaitami
