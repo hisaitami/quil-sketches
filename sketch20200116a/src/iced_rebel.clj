@@ -1,4 +1,4 @@
-(ns user
+(ns iced-rebel
   "NOTE: This code is borrowed from the vim-iced document.
          see https://github.com/liquidz/vim-iced
 
