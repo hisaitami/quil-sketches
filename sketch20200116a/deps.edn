@@ -1,9 +1,6 @@
 {:deps
  {org.clojure/clojure {:mvn/version "1.11.1"}
   quil/quil {:mvn/version "4.3.1323"}}
- :aliases {:rebel {:extra-deps {nrepl/nrepl {:mvn/version "1.1.0"}
-                                refactor-nrepl/refactor-nrepl {:mvn/version "3.9.1"}
-                                cider/cider-nrepl {:mvn/version "0.44.0"}
-                                com.github.liquidz/iced-nrepl {:mvn/version "1.2.480"}
-                                com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
-                   :main-opts ["-m" "rebel-readline.main"]}}}
+ :aliases
+ {:rebel {:extra-deps {repl-lib/repl-lib {:local/root "../repl-lib"}}
+          :main-opts ["-m" "rebel-readline.main"]}}}
