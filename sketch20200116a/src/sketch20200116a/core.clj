@@ -1,31 +1,28 @@
 (ns sketch20200116a.core
-  (:require [quil.core :as q]
-            [quil.middleware :as m]))
+  (:require [quil.core :as q]))
+
+(def W 500)
+(def c (atom 0.0))
 
 (defn setup []
-  (q/frame-rate 24)
-  {:counter 0.0})
+  (q/frame-rate 24))
 
-(defn update-state [state]
-  {:counter (+ (:counter state) 0.1)})
-
-(defn draw-state [state]
+(defn draw []
   (q/background 0)
   (q/fill 0)
   (q/stroke 255)
-  (doseq [s (range (q/width) 0 -8)
-          :let [x (* 0.5 (q/width))
-                y (* 0.5 (q/height))
-                a (q/sin (- (:counter state) (/ s 48)))
-                b (* q/TWO-PI a)]]
+  (let [c (swap! c #(+ 0.1 %))
+        x (* 0.5 (q/width))
+        y (* 0.5 (q/height))]
+    (doseq [s (range (q/width) 0 -8)
+            :let [a (q/sin (- c (/ s 48)))
+                  b (* q/TWO-PI a)]]
       (q/arc x y s s 0 b)
-      (q/arc x y s s a 0)))
+      (q/arc x y s s a 0))))
 
 (q/defsketch sketch20200116a
   :title "sketch20200116a"
-  :size [500 500]
+  :size [W W]
   :setup setup
-  :update update-state
-  :draw draw-state
-  :features [:keep-on-top]
-  :middleware [m/fun-mode])
+  :draw draw
+  :features [:keep-on-top])
