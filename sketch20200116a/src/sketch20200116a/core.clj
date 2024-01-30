@@ -11,7 +11,7 @@
   (q/background 0)
   (q/fill 0)
   (q/stroke 255)
-  (let [c (swap! c #(+ 0.1 %))
+  (let [c (swap! c + 0.1)
         x (* 0.5 (q/width))
         y (* 0.5 (q/height))]
     (doseq [s (range (q/width) 0 -8)
