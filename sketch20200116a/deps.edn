@@ -1,6 +1,6 @@
 {:deps
  {org.clojure/clojure {:mvn/version "1.11.1"}
-  quil/quil {:mvn/version "4.3.1323"}}
+  quil/quil {:mvn/version "4.3.1563"}}
  :aliases
  {:rebel {:extra-deps {repl-lib/repl-lib {:local/root "../repl-lib"}}
           :main-opts ["-m" "rebel-readline.main"]}}}

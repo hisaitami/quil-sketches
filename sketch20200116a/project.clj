@@ -4,4 +4,4 @@
   :license {:name "The MIT License"
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.11.1"]
-                 [quil "4.3.1323"]])
+                 [quil "4.3.1563"]])
