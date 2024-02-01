@@ -34,8 +34,8 @@
 
 (defn start-nrepl-server! []
   (reset!
-    nrepl-server
-    (nrepl-server/start-server :port nrepl-port :handler (nrepl-handler)))
+   nrepl-server
+   (nrepl-server/start-server :port nrepl-port :handler (nrepl-handler)))
   (println "Cider nREPL server started on port" nrepl-port)
   (spit ".nrepl-port" nrepl-port))
 
