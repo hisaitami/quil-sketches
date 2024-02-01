@@ -6,9 +6,9 @@
 (defn setup []
   (q/frame-rate 30)
   (q/set-state! :qrimg (q/load-image
-                         (-> "hello world"
-                             (qrgen/from :size [(q/width) (q/height)])
-                             (qrgen/as-file)))))
+                        (-> "hello world"
+                            (qrgen/from :size [(q/width) (q/height)])
+                            (qrgen/as-file)))))
 
 (defn draw-state [state]
   (q/background 240)
