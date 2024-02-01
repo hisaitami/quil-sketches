@@ -6,9 +6,9 @@
 (defn setup []
   (q/frame-rate 30)
   (q/set-state! :qrimg (q/load-image
-                         (-> "hello world"
-                             (qrgen/from :size [(q/width) (q/height)])
-                             (qrgen/as-file)))))
+                        (-> "hello world"
+                            (qrgen/from :size [(q/width) (q/height)])
+                            (qrgen/as-file)))))
 
 (defn draw-state [state]
   ;(q/background 232)
@@ -81,9 +81,7 @@
     (q/no-stroke)
     (let [r (mod x 4)]
       (q/fill (+ 200 (rand-int 55)) 255 255)
-      (q/ellipse (+ (- x 60) (rand-int 120)) (+ (- y 60) (rand-int 120)) r r))
-
-    ))
+      (q/ellipse (+ (- x 60) (rand-int 120)) (+ (- y 60) (rand-int 120)) r r))))
 
 (q/defsketch sketch20231208a
   :title "hello world in QRcode"
