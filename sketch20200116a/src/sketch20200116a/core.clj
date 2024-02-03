@@ -12,9 +12,9 @@
   (q/fill 0)
   (q/stroke 255)
   (let [c (swap! c + 0.1)
-        x (* 0.5 (q/width))
-        y (* 0.5 (q/height))]
-    (doseq [s (range (q/width) 0 -8)
+        x (* 0.5 W)
+        y (* 0.5 W)]
+    (doseq [s (range W 0 -8)
             :let [a (q/sin (- c (/ s 48)))
                   b (* q/TWO-PI a)]]
       (q/arc x y s s 0 b)
