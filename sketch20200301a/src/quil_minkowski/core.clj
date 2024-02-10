@@ -4,6 +4,7 @@
 
 (def W 500)
 (def HALF-W (* 0.5 W))
+(def p (atom 3))
 
 (defn normalize [x]
   (let [step (quot HALF-W 10)]
@@ -15,7 +16,7 @@
 (defn draw []
   (doseq [y (range W)
           x (range W)
-          :let [dist (distance/minkowski [HALF-W HALF-W] [x y] 3)
+          :let [dist (distance/minkowski [HALF-W HALF-W] [x y] @p)
                 gray (normalize (* 255 (/ dist W)))]]
     (q/stroke gray)
     (q/stroke-weight 1)
@@ -28,4 +29,5 @@
   :draw draw
   :features [:keep-on-top])
 
-(defn -main [])
+(defn -main [& args]
+  (reset! p (Integer/valueOf (first args))))
