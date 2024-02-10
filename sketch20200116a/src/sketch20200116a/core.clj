@@ -26,3 +26,5 @@
   :setup setup
   :draw draw
   :features [:keep-on-top])
+
+(defn -main [])
