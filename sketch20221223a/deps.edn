@@ -1,4 +1,4 @@
 {:deps
- {org.clojure/clojure {:mvn/version "1.11.1"}
+ {org.clojure/clojure {:mvn/version "1.11.2"}
   quil/quil {:mvn/version "4.3.1563"}
   clj.qrgen/clj.qrgen {:mvn/version "0.4.0"}}}

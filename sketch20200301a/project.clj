@@ -3,6 +3,6 @@
   :url "https://github.com/hisaitami/quil-sketches"
   :license {:name "The MIT License"
             :url "http://opensource.org/licenses/MIT"}
-  :dependencies [[org.clojure/clojure "1.11.1"]
+  :dependencies [[org.clojure/clojure "1.11.2"]
                  [quil "4.3.1563"]
                  [tyrion "0.1.9"]])
