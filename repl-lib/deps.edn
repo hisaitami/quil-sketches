@@ -1,9 +1,9 @@
 {:deps
- {org.clojure/clojure {:mvn/version "1.11.2"}
+ {org.clojure/clojure {:mvn/version "1.11.3"}
   com.bhauman/rebel-readline {:mvn/version "0.1.4"}
   nrepl/nrepl {:mvn/version "1.1.1"}
   refactor-nrepl/refactor-nrepl {:mvn/version "3.10.0"}
-  cider/cider-nrepl {:mvn/version "0.47.0"}
+  cider/cider-nrepl {:mvn/version "0.47.1"}
   com.github.liquidz/iced-nrepl {:mvn/version "1.2.480"}}
 
  :aliases
