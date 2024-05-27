@@ -1,5 +1,5 @@
 (ns sketch20200116a.core
-  (:require [quil.core :as q]))
+  (:require [quil.core :as q :refer [sin TWO-PI]]))
 
 (def W 500)
 (def c (atom 0.0))
@@ -15,8 +15,8 @@
         x (* 0.5 W)
         y (* 0.5 W)]
     (doseq [s (range W 0 -8)
-            :let [a (q/sin (- c (/ s 48)))
-                  b (* q/TWO-PI a)]]
+            :let [a (sin (- c (/ s 48)))
+                  b (* TWO-PI a)]]
       (q/arc x y s s 0 b)
       (q/arc x y s s a 0))))
 
