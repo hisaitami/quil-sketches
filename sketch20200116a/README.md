@@ -15,6 +15,6 @@ CLI - run `clj -M -e "(require 'sketch20200116a.core)"` or `clj -M -m sketch2020
 
 ## License
 
-Copyright (c) 2024 hisaitami
+Copyright (c) 2025 hisaitami
 Distributed under the terms of the [MIT License](LICENSE)
 

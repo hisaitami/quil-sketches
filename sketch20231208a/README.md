@@ -14,6 +14,6 @@ CLI - run `clj -e "(require 'sketch20231208a.core)"`
 
 ## License
 
-Copyright (c) 2024 hisaitami
+Copyright (c) 2025 hisaitami
 Distributed under the terms of the [MIT License](LICENSE)
 
